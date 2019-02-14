@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_movie_poster_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:scaleType="fitXY"/>
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <customfonts.MyTextView_SF_Pro_Light
+                        android:id="@+id/tv_movie_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="20sp"
+                        android:textColor="#1f2833"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/dark_circle_red"/>
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/dark_circle_red"/>
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/dark_circle_red"/>
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/dark_circle_red"/>
+
+
+
+
+                        <customfonts.TextViewSFProDisplayRegular
+                            android:id="@+id/tv_movie_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#a0a0a0"
+                            android:textSize="10sp"
+                            android:layout_marginLeft="7dp"
+                            android:text="512 ratings vote"/>
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:src="@drawable/ic_movie_black_24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"/>
+
+                        <customfonts.TextViewSFProDisplayRegular
+                            android:id="@+id/tv_movie_seasons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seasons number"
+                            android:textSize="10sp"
+                            android:textColor="#1f2833"
+                            android:layout_marginLeft="4dp"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="18dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_bookmark2"/>
+            </LinearLayout>
+
+
+            <customfonts.TextViewSFProDisplaySemibold
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overview"
+                android:textSize="13sp"
+                android:textColor="#1f2833"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"/>
+
+
+            <customfonts.TextViewSFProDisplayRegular
+                android:id="@+id/tv_movie_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1f2833"
+                android:textSize="13sp"
+                android:lineSpacingExtra="2dp"
+                android:text="Summary"
+                android:layout_margin="12dp"/>
+
+            <customfonts.TextViewSFProDisplaySemibold
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Similar TV shows"
+                android:textSize="13sp"
+                android:textColor="#b1051f"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:scrollbars="none"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/recyclerViewSimilar">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
